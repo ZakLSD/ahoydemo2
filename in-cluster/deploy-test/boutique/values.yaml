@@ -23,27 +23,27 @@ applications:
       PRODUCT_CATALOG_SERVICE_ADDR:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-productcatalogservice:3550
+        value: boutique-microservicesdemoproductcatalogservice:3550
       SHIPPING_SERVICE_ADDR:
         key: SHIPPING_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-shippingservice:50051
+        value: boutique-microservicesdemoshippingservice:50051
       PAYMENT_SERVICE_ADDR:
         key: PAYMENT_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-paymentservice:50051
+        value: boutique-microservicesdemopaymentservice:50051
       CURRENCY_SERVICE_ADDR:
         key: CURRENCY_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-currencyservice:7000
+        value: boutique-microservicesdemocurrencyservice:7000
       CART_SERVICE_ADDR:
         key: CART_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-cartservice:7070
+        value: boutique-microservicesdemocartservice:7070
       EMAIL_SERVICE_ADDR:
         key: EMAIL_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-emailservice:8080
+        value: boutique-microservicesdemoemailservice:8080
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.2.3
     name: microservicesdemocheckoutservice
@@ -224,7 +224,7 @@ applications:
       PRODUCT_CATALOG_SERVICE_ADDR:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-productcatalogservice:3550
+        value: boutique-microservicesdemoproductcatalogservice:3550
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.2.3
     name: microservicesdemorecommendationservice
