@@ -63,31 +63,31 @@ applications:
       PRODUCT_CATALOG_SERVICE_ADDR:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-productcatalogservice:3550
+        value: boutique-microservicesdemoproductcatalogservice:3550
       CURRENCY_SERVICE_ADDR:
         key: CURRENCY_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-recommendationservice:8080
+        value: "\tboutique-microservicesdemorecommendationservice:8080"
       SHIPPING_SERVICE_ADDR:
         key: SHIPPING_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-shippingservice:50051
+        value: boutique-microservicesdemoshippingservice:50051
       CHECKOUT_SERVICE_ADDR:
         key: CHECKOUT_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-checkoutservice:5050
+        value: boutique-microservicesdemocheckoutservice:5050
       AD_SERVICE_ADDR:
         key: AD_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-adservice:9555
+        value: "\tboutique-microservicesdemoadservice:9555"
       CART_SERVICE_ADDR:
         key: CART_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-cartservice:7070
+        value: boutique-microservicesdemocartservice:7070
       RECOMMENDATION_SERVICE_ADDR:
         key: RECOMMENDATION_SERVICE_ADDR
         type: Value
-        value: boutique-microservices-demo-recommendationservice:8080
+        value: "\tboutique-microservicesdemorecommendationservice:8080"
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
     name: microservicesdemofrontend
