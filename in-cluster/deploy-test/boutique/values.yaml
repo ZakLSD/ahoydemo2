@@ -172,13 +172,13 @@ applications:
         type: Value
         value: '50051'
     healthEndpointScheme: HTTP
-    image: 'image: gcr.io/google-samples/microservices-demo/shippingservice:v0.2.3'
+    image: gcr.io/google-samples/microservices-demo/shippingservice:v0.2.3
     name: microservicesdemoshippingservice
     replicas: 1
     secrets: {
       }
-    servicePorts: [
-      ]
+    servicePorts:
+    - 50051
     tls: false
     version: v0.2.3
     volumes: {
