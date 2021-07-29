@@ -250,14 +250,8 @@ applications:
       ]
     tls: false
     version: v0.2.3
-    volumes:
-      redis-data:
-        accessMode: ReadWriteOnce
-        mountPath: /data
-        name: redis-data
-        size: 100Mi
-        storageClassName: local-path
-        type: PersistentVolume
+    volumes: {
+      }
 environment: deploy-test
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
