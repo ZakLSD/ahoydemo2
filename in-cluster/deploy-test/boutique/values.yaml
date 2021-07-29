@@ -140,10 +140,10 @@ applications:
     configs: {
       }
     environmentVariables:
-      '"REDIS_ADDR\t"':
-        key: '"REDIS_ADDR\t"'
+      '"REDIS_ADDR"':
+        key: '"REDIS_ADDR"'
         type: Value
-        value: "\tonline-boutique-redis:6379"
+        value: online-boutique-redis:6379
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/cartservice:v0.2.3
     name: microservicesdemocartservice
