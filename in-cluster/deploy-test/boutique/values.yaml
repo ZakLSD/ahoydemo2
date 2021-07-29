@@ -84,6 +84,10 @@ applications:
         key: CART_SERVICE_ADDR
         type: Value
         value: online-boutique-microservices-demo-cartservice:7070
+      RECOMMENDATION_SERVICE_ADDR:
+        key: RECOMMENDATION_SERVICE_ADDR
+        type: Value
+        value: online-boutique-microservices-demo-recommendationservice:8080
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
     name: microservicesdemofrontend
