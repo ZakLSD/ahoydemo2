@@ -167,8 +167,8 @@ applications:
     replicas: 1
     secrets: {
       }
-    servicePorts: [
-      ]
+    servicePorts:
+    - 7000
     tls: false
     version: v0.2.3
     volumes: {
