@@ -92,6 +92,8 @@ applications:
     image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
     name: microservicesdemofrontend
     replicas: 1
+    routeHostname: boutique-microservicesdemofrontend-deploy-test.ahoy.svc.qa.int-qa.interfile.co.za
+    routeTargetPort: 8080
     secrets: {
       }
     servicePorts:
