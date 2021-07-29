@@ -20,30 +20,30 @@ applications:
     configs: {
       }
     environmentVariables:
-      PRODUCT_CATALOG_SERVICE_ADDR:
-        key: PRODUCT_CATALOG_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemoproductcatalogservice:3550
-      SHIPPING_SERVICE_ADDR:
-        key: SHIPPING_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemoshippingservice:50051
-      PAYMENT_SERVICE_ADDR:
-        key: PAYMENT_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemopaymentservice:50051
-      CURRENCY_SERVICE_ADDR:
-        key: CURRENCY_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemocurrencyservice:7000
-      CART_SERVICE_ADDR:
-        key: CART_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemocartservice:7070
       EMAIL_SERVICE_ADDR:
         key: EMAIL_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemoemailservice:8080
+      CART_SERVICE_ADDR:
+        key: CART_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocartservice:7070
+      CURRENCY_SERVICE_ADDR:
+        key: CURRENCY_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocurrencyservice:7000
+      PAYMENT_SERVICE_ADDR:
+        key: PAYMENT_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemopaymentservice:50051
+      SHIPPING_SERVICE_ADDR:
+        key: SHIPPING_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoshippingservice:50051
+      PRODUCT_CATALOG_SERVICE_ADDR:
+        key: PRODUCT_CATALOG_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoproductcatalogservice:3550
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.2.3
     name: microservicesdemocheckoutservice
@@ -60,34 +60,34 @@ applications:
     configs: {
       }
     environmentVariables:
-      PRODUCT_CATALOG_SERVICE_ADDR:
-        key: PRODUCT_CATALOG_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemoproductcatalogservice:3550
-      SHIPPING_SERVICE_ADDR:
-        key: SHIPPING_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemoshippingservice:50051
-      CHECKOUT_SERVICE_ADDR:
-        key: CHECKOUT_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemocheckoutservice:5050
-      AD_SERVICE_ADDR:
-        key: AD_SERVICE_ADDR
-        type: Value
-        value: "\tboutique-microservicesdemoadservice:9555"
-      CART_SERVICE_ADDR:
-        key: CART_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemocartservice:7070
-      CURRENCY_SERVICE_ADDR:
-        key: CURRENCY_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemorecommendationservice:8080
       RECOMMENDATION_SERVICE_ADDR:
         key: RECOMMENDATION_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemorecommendationservice:8080
+      CURRENCY_SERVICE_ADDR:
+        key: CURRENCY_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemorecommendationservice:8080
+      CART_SERVICE_ADDR:
+        key: CART_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocartservice:7070
+      AD_SERVICE_ADDR:
+        key: AD_SERVICE_ADDR
+        type: Value
+        value: "\tboutique-microservicesdemoadservice:9555"
+      CHECKOUT_SERVICE_ADDR:
+        key: CHECKOUT_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocheckoutservice:5050
+      SHIPPING_SERVICE_ADDR:
+        key: SHIPPING_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoshippingservice:50051
+      PRODUCT_CATALOG_SERVICE_ADDR:
+        key: PRODUCT_CATALOG_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoproductcatalogservice:3550
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
     name: microservicesdemofrontend
@@ -217,14 +217,14 @@ applications:
     configs: {
       }
     environmentVariables:
-      PORT:
-        key: PORT
-        type: Value
-        value: '8080'
       PRODUCT_CATALOG_SERVICE_ADDR:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemoproductcatalogservice:3550
+      PORT:
+        key: PORT
+        type: Value
+        value: '8080'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.2.3
     name: microservicesdemorecommendationservice
