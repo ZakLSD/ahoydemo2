@@ -159,8 +159,11 @@ applications:
   microservicesdemocurrencyservice:
     configs: {
       }
-    environmentVariables: {
-      }
+    environmentVariables:
+      PORT:
+        key: PORT
+        type: Value
+        value: '7000'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/currencyservice:v0.2.3
     name: microservicesdemocurrencyservice
