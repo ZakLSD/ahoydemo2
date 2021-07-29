@@ -138,8 +138,8 @@ applications:
     configs: {
       }
     environmentVariables:
-      REDIS_ADDR\t:
-        key: REDIS_ADDR\t
+      REDIS_ADDR:
+        key: REDIS_ADDR
         type: Value
         value: online-boutique-redis:6379
     healthEndpointScheme: HTTP
