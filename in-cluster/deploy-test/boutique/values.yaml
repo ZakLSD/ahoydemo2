@@ -253,4 +253,4 @@ applications:
 environment: deploy-test
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
-releaseVersion: v0.2.3
+releaseVersion: 0.2.4
