@@ -224,6 +224,10 @@ applications:
     configs: {
       }
     environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
       PRODUCT_CATALOG_SERVICE_ADDR:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
