@@ -129,8 +129,19 @@ applications:
   microservicesdemopaymentservice:
     configs: {
       }
-    environmentVariables: {
-      }
+    environmentVariables:
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/paymentservice:v0.2.3
     name: microservicesdemopaymentservice
