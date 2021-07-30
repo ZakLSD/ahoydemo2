@@ -130,6 +130,10 @@ applications:
     configs: {
       }
     environmentVariables:
+      PORT:
+        key: PORT
+        type: Value
+        value: '50051'
       DISABLE_PROFILER:
         key: DISABLE_PROFILER
         type: Value
