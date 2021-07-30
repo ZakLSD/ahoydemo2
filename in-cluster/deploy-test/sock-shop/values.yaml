@@ -11,6 +11,8 @@ applications:
     image: weaveworksdemos/front-end
     name: sock-frontend
     replicas: 1
+    routeHostname: sock-shop.svc.qa.int-qa.interfile.co.za
+    routeTargetPort: 8079
     secrets: {
       }
     servicePorts:
