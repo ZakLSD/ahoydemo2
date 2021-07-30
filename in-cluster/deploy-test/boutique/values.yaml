@@ -160,6 +160,10 @@ applications:
     configs: {
       }
     environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
       PORT:
         key: PORT
         type: Value
