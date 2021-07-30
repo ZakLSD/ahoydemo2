@@ -168,6 +168,14 @@ applications:
         key: PORT
         type: Value
         value: '7000'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/currencyservice:v0.2.3
     name: microservicesdemocurrencyservice
