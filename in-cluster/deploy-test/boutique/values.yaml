@@ -44,6 +44,18 @@ applications:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemoproductcatalogservice:3550
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.2.3
     name: microservicesdemocheckoutservice
@@ -204,6 +216,18 @@ applications:
     configs: {
       }
     environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
       PORT:
         key: PORT
         type: Value
