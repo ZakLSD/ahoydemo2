@@ -64,10 +64,6 @@ applications:
         key: RECOMMENDATION_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemorecommendationservice:8080
-      CURRENCY_SERVICE_ADDR:
-        key: CURRENCY_SERVICE_ADDR
-        type: Value
-        value: boutique-microservicesdemorecommendationservice:8080
       CART_SERVICE_ADDR:
         key: CART_SERVICE_ADDR
         type: Value
@@ -88,6 +84,22 @@ applications:
         key: PRODUCT_CATALOG_SERVICE_ADDR
         type: Value
         value: boutique-microservicesdemoproductcatalogservice:3550
+      CURRENCY_SERVICE_ADDR:
+        key: CURRENCY_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocurrencyservice:7000
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
     healthEndpointScheme: HTTP
     image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
     name: microservicesdemofrontend
