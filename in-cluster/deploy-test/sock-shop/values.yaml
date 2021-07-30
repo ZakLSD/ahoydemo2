@@ -1,0 +1,25 @@
+applications:
+  sockfrontend:
+    configs: {
+      }
+    environmentVariables:
+      SESSION_REDIS:
+        key: SESSION_REDIS
+        type: Value
+        value: '"true"'
+    healthEndpointScheme: HTTP
+    image: weaveworksdemos/front-end
+    name: sock-frontend
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8079
+    tls: false
+    version: v1.0.0
+    volumes: {
+      }
+environment: deploy-test
+host: ahoy.svc.qa.int-qa.interfile.co.za
+releaseName: sock-shop
+releaseVersion: 1.0.0
