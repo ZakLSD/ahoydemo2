@@ -325,19 +325,15 @@ applications:
   nginxtest:
     configs: {
       }
-    environmentVariables:
-      USER:
-        key: USER
-        type: Value
-        value: BOB
-    healthEndpointScheme: HTTP
-    image: nginx:latest
+    environmentVariables: {
+      }
+    image: nginx-test
     name: nginx-test
     replicas: 1
     secrets: {
       }
-    servicePorts:
-    - 8080
+    servicePorts: [
+      ]
     tls: false
     version: v1.0.0
     volumes: {
