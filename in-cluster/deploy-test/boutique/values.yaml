@@ -329,7 +329,7 @@ applications:
       }
     environmentVariables: {
       }
-    image: nginx-test
+    image: nginx:latest
     name: nginx-test
     replicas: 1
     secrets: {
@@ -337,7 +337,7 @@ applications:
     servicePorts: [
       ]
     tls: false
-    version: v1.0.0
+    version: 1.0.1
     volumes: {
       }
 environment: deploy-test
