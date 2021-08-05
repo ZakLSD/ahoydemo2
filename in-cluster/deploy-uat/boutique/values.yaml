@@ -341,4 +341,4 @@ applications:
 environment: deploy-uat
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
-releaseVersion: 0.2.4
+releaseVersion: 0.2.5
