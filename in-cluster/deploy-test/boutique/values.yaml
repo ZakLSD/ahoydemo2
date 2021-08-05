@@ -324,6 +324,26 @@ applications:
     version: v0.2.3
     volumes: {
       }
+  nginxtest:
+    configs: {
+      }
+    environmentVariables:
+      USER:
+        key: USER
+        type: Value
+        value: BOB
+    healthEndpointScheme: HTTP
+    image: nginx:latest
+    name: nginx-test
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8080
+    tls: false
+    version: v1.0.0
+    volumes: {
+      }
 environment: deploy-test
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
