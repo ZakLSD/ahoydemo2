@@ -13,7 +13,7 @@ applications:
     servicePorts:
     - 8080
     tls: false
-    version: V0.2.4
+    version: v0.2.3
     volumes: {
       }
   microservicesdemocheckoutservice:
@@ -343,4 +343,4 @@ applications:
 environment: deploy-test
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
-releaseVersion: 0.2.4
+releaseVersion: 0.2.5
