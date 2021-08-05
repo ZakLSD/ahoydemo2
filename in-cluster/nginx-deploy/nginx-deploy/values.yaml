@@ -1,0 +1,24 @@
+applications:
+  nginx:
+    configPath: test
+    configs: {
+      }
+    environmentVariables: {
+      }
+    healthEndpointPath: ''
+    healthEndpointScheme: HTTP
+    image: nginx:latest
+    name: nginx
+    replicas: 1
+    secrets: {
+      }
+    servicePorts: [
+      ]
+    tls: false
+    version: 1.0.0
+    volumes: {
+      }
+environment: nginx-deploy
+host: ahoy.svc.qa.int-qa.interfile.co.za
+releaseName: nginx-deploy
+releaseVersion: 1.0.0
