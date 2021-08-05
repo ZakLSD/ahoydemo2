@@ -1,0 +1,348 @@
+applications:
+  microservicesdemoemailservice:
+    configs: {
+      }
+    environmentVariables: {
+      }
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/emailservice:v0.2.3
+    name: microservicesdemoemailservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8080
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemocheckoutservice:
+    configs: {
+      }
+    environmentVariables:
+      EMAIL_SERVICE_ADDR:
+        key: EMAIL_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoemailservice:8080
+      CART_SERVICE_ADDR:
+        key: CART_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocartservice:7070
+      CURRENCY_SERVICE_ADDR:
+        key: CURRENCY_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocurrencyservice:7000
+      PAYMENT_SERVICE_ADDR:
+        key: PAYMENT_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemopaymentservice:50051
+      SHIPPING_SERVICE_ADDR:
+        key: SHIPPING_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoshippingservice:50051
+      PRODUCT_CATALOG_SERVICE_ADDR:
+        key: PRODUCT_CATALOG_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoproductcatalogservice:3550
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.2.3
+    name: microservicesdemocheckoutservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 5050
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemofrontend:
+    configs: {
+      }
+    environmentVariables:
+      RECOMMENDATION_SERVICE_ADDR:
+        key: RECOMMENDATION_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemorecommendationservice:8080
+      CART_SERVICE_ADDR:
+        key: CART_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocartservice:7070
+      AD_SERVICE_ADDR:
+        key: AD_SERVICE_ADDR
+        type: Value
+        value: "\tboutique-microservicesdemoadservice:9555"
+      CHECKOUT_SERVICE_ADDR:
+        key: CHECKOUT_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocheckoutservice:5050
+      SHIPPING_SERVICE_ADDR:
+        key: SHIPPING_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoshippingservice:50051
+      PRODUCT_CATALOG_SERVICE_ADDR:
+        key: PRODUCT_CATALOG_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoproductcatalogservice:3550
+      CURRENCY_SERVICE_ADDR:
+        key: CURRENCY_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemocurrencyservice:7000
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/frontend:v0.2.3
+    name: microservicesdemofrontend
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8080
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemopaymentservice:
+    configs: {
+      }
+    environmentVariables:
+      PORT:
+        key: PORT
+        type: Value
+        value: '50051'
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/paymentservice:v0.2.3
+    name: microservicesdemopaymentservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 50051
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemoproductcatalogservice:
+    configs: {
+      }
+    environmentVariables: {
+      }
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.2.3
+    name: microservicesdemoproductcatalogservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 3550
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemocartservice:
+    configs: {
+      }
+    environmentVariables:
+      '"REDIS_ADDR"':
+        key: '"REDIS_ADDR"'
+        type: Value
+        value: boutique-redis:6379
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/cartservice:v0.2.3
+    name: microservicesdemocartservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 7070
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemocurrencyservice:
+    configs: {
+      }
+    environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      PORT:
+        key: PORT
+        type: Value
+        value: '7000'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/currencyservice:v0.2.3
+    name: microservicesdemocurrencyservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 7000
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemoshippingservice:
+    configs: {
+      }
+    environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      DISABLE_PROFILER:
+        key: DISABLE_PROFILER
+        type: Value
+        value: '1'
+      DISABLE_DEBUGGER:
+        key: DISABLE_DEBUGGER
+        type: Value
+        value: '1'
+      PORT:
+        key: PORT
+        type: Value
+        value: '50051'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/shippingservice:v0.2.3
+    name: microservicesdemoshippingservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 50051
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemoadservice:
+    configs: {
+      }
+    environmentVariables:
+      PORT:
+        key: PORT
+        type: Value
+        value: '9555'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/adservice:v0.2.3
+    name: microservicesdemoadservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 9555
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  microservicesdemorecommendationservice:
+    configs: {
+      }
+    environmentVariables:
+      DISABLE_TRACING:
+        key: DISABLE_TRACING
+        type: Value
+        value: '1'
+      PRODUCT_CATALOG_SERVICE_ADDR:
+        key: PRODUCT_CATALOG_SERVICE_ADDR
+        type: Value
+        value: boutique-microservicesdemoproductcatalogservice:3550
+      PORT:
+        key: PORT
+        type: Value
+        value: '8080'
+    healthEndpointScheme: HTTP
+    image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.2.3
+    name: microservicesdemorecommendationservice
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8080
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  redis:
+    configs: {
+      }
+    environmentVariables: {
+      }
+    healthEndpointScheme: HTTP
+    image: docker.io/redis:alpine
+    name: redis
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 6379
+    tls: false
+    version: v0.2.3
+    volumes: {
+      }
+  nginxtest:
+    configs: {
+      }
+    environmentVariables:
+      USER:
+        key: USER
+        type: Value
+        value: BOB
+    healthEndpointScheme: HTTP
+    image: nginx:latest
+    name: nginx-test
+    replicas: 1
+    secrets: {
+      }
+    servicePorts:
+    - 8080
+    tls: false
+    version: v1.0.0
+    volumes: {
+      }
+environment: Deploy-uat
+host: ahoy.svc.qa.int-qa.interfile.co.za
+releaseName: boutique
+releaseVersion: 0.2.4
