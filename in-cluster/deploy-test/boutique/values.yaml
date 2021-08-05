@@ -324,20 +324,24 @@ applications:
     version: v0.2.3
     volumes: {
       }
-  nginxtest:
+  nginxqa:
     configs: {
       }
-    environmentVariables: {
-      }
+    environmentVariables:
+      USER:
+        key: USER
+        type: Value
+        value: STEVEN
+    healthEndpointScheme: HTTP
     image: nginx:latest
-    name: nginx-test
+    name: nginx-qa
     replicas: 1
     secrets: {
       }
-    servicePorts: [
-      ]
+    servicePorts:
+    - 8080
     tls: false
-    version: 1.0.1
+    version: v1.0.0
     volumes: {
       }
 environment: deploy-test
