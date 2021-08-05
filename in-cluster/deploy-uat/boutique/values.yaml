@@ -13,7 +13,7 @@ applications:
     servicePorts:
     - 8080
     tls: false
-    version: v0.2.3
+    version: V0.2.4
     volumes: {
       }
   microservicesdemocheckoutservice:
@@ -327,7 +327,7 @@ applications:
       }
     environmentVariables: {
       }
-    image: nginx-test
+    image: nginx:latest
     name: nginx-test
     replicas: 1
     secrets: {
@@ -335,10 +335,10 @@ applications:
     servicePorts: [
       ]
     tls: false
-    version: v1.0.0
+    version: 1.0.1
     volumes: {
       }
 environment: deploy-uat
 host: ahoy.svc.qa.int-qa.interfile.co.za
 releaseName: boutique
-releaseVersion: 0.2.5
+releaseVersion: 0.2.4
